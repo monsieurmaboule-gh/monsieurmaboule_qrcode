@@ -164,7 +164,7 @@ document.querySelectorAll('.choix-btn').forEach(btn => {
     reponses['q' + qi] = val;
     const dot = document.getElementById('dot-' + qi);
     if (dot) dot.classList.add('done');
-    fetch('https://monsieurmaboule.app.n8n.cloud/webhook/maboule', {
+    fetch('https://monsieurmaboule.app.n8n.cloud/webhook-test/maboule', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ sku: 'BOULE_CONFITE', question: qi, reponse: val, timestamp: new Date().toISOString() })
